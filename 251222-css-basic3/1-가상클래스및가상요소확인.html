@@ -46,6 +46,37 @@
             background-color: aquamarine;
         }
 
+        /* 리스트 기본 css 작업 후, 해당 요소별 가상 클래스 적용 */
+        ul {
+            /* 요소들 앞에 기호를 원모양, 네모모양, 모양없음 설정 가능 */
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 200px;
+        }
+
+        /* 1-5 목록 요소에서, 첫번째 요소 선택하기.  */
+        li:first-child {
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+            border: 2px solid red;
+        }
+        /* 1-5 목록 요소에서, 짝수번째 요소 선택하기.  */
+        li:nth-child(even) {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border: 2px solid gold;
+        }
+        /* 1-5 목록 요소에서, 짝수번째 요소 선택하기.  */
+        li:nth-child(3) {
+            background-color: violet;
+            color: white;
+            font-weight: bold;
+            border: 2px solid aqua;
+        }
+
         /* 2. 가상 요소: '인기 메뉴' 뒤에 별표 붙이기 */
         .menu-item {
             font-size: 20px;
@@ -70,6 +101,7 @@
 </head>
 
 <body>
+    <h2>가상클래스 속성 별 옵션 확인</h2>
     <button class="btn">마우스를 올려보세요</button>
     <input type="text" class="my-input" placeholder="가상클래스 옵션 확인중...">
     <ul>
@@ -82,6 +114,7 @@
 
     <br><br>
 
+     <h2>가상요소 속성 별 옵션 확인</h2>
     <div class="menu-item">인기 메뉴</div>
     <div class="menu-item">추천 메뉴</div>
     <br>
